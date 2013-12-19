@@ -1,0 +1,13 @@
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\Bin\Release\ApplicationIcon.png
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\Bin\Release\Background.png
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\Bin\Release\sdkToastNotificationCS.dll
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\Bin\Release\sdkToastNotificationCS.pdb
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\Bin\Release\AppManifest.xaml
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\Bin\Release\sdkToastNotificationCS.xap
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\App.g.cs
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\MainPage.g.cs
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\Page2.g.cs
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\sdkToastNotificationCS.g.resources
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\sdkToastNotificationCS.dll
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\sdkToastNotificationCS.pdb
+D:\Code GitHub\WPsopraMob\sdkToastNotificationCS\obj\Release\XapCacheFile.xml

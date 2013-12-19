@@ -29,7 +29,7 @@ namespace sdkToastNotificationCS
             HttpNotificationChannel pushChannel;
 
             // The name of our push channel.
-            string channelName = "ToastSampleChannel";
+            string channelName = "sopramob42";
 
             InitializeComponent();
 
@@ -39,6 +39,7 @@ namespace sdkToastNotificationCS
             // If the channel was not found, then create a new connection to the push service.
             if (pushChannel == null)
             {
+                System.Diagnostics.Debug.WriteLine("pushChannel is null");
 
                 pushChannel = new HttpNotificationChannel(channelName);
 
@@ -49,12 +50,19 @@ namespace sdkToastNotificationCS
                 // Register for this notification only if you need to receive the notifications while your application is running.
                 pushChannel.ShellToastNotificationReceived += new EventHandler<NotificationEventArgs>(PushChannel_ShellToastNotificationReceived);
 
+                System.Diagnostics.Debug.WriteLine("opening...");
                 pushChannel.Open();
+                System.Diagnostics.Debug.WriteLine("opened!");
                 // Bind this new channel for toast events.
                 pushChannel.BindToShellToast();
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("pushChannel already exist");
+                System.Diagnostics.Debug.WriteLine(pushChannel.ChannelName);
+                System.Diagnostics.Debug.WriteLine(pushChannel.ChannelUri);
+
+
                 // The channel was already open, so just register for all the events.
                 pushChannel.ChannelUriUpdated += new EventHandler<NotificationChannelUriEventArgs>(PushChannel_ChannelUriUpdated);
                 pushChannel.ErrorOccurred += new EventHandler<NotificationChannelErrorEventArgs>(PushChannel_ErrorOccurred);
@@ -63,10 +71,15 @@ namespace sdkToastNotificationCS
                 pushChannel.ShellToastNotificationReceived += new EventHandler<NotificationEventArgs>(PushChannel_ShellToastNotificationReceived);
 
                 // Display the URI for testing purposes. Normally, the URI would be passed back to your web service at this point.
-                System.Diagnostics.Debug.WriteLine("hello");
+                System.Diagnostics.Debug.WriteLine("wait for the uri to trigger PushChannel_ChannelUriUpdated ...");
+                while (pushChannel.ChannelUri == null)
+                {
+                
+                }
                 System.Diagnostics.Debug.WriteLine(pushChannel.ChannelUri.ToString());
-                MessageBox.Show(String.Format("Channel Uri is {0}",
-                    pushChannel.ChannelUri.ToString()));
+                //MessageBox.Show(String.Format("Channel Uri is {0}",
+                    //pushChannel.ChannelUri.ToString()));
+                //register(pushChannel.ChannelUri.ToString());
 
             }
         }
@@ -79,12 +92,14 @@ namespace sdkToastNotificationCS
         void PushChannel_ChannelUriUpdated(object sender, NotificationChannelUriEventArgs e)
         {
 
+            //System.Diagnostics.Debug.WriteLine("... triggered!");
             Dispatcher.BeginInvoke(() =>
             {
+                System.Diagnostics.Debug.WriteLine("... triggered!");
                 // Display the new URI for testing purposes.   Normally, the URI would be passed back to your web service at this point.
                 System.Diagnostics.Debug.WriteLine(e.ChannelUri.ToString());
-                MessageBox.Show(String.Format("Channel Uri is {0}",
-                    e.ChannelUri.ToString()));
+                //MessageBox.Show(String.Format("Channel Uri is {0}",
+                //  e.ChannelUri.ToString()));
                 register(e.ChannelUri.ToString());
                 
             });
@@ -115,6 +130,8 @@ namespace sdkToastNotificationCS
         {
             StringBuilder message = new StringBuilder();
             string relativeUri = string.Empty;
+
+            System.Diagnostics.Debug.WriteLine("Réception d'une notification");
 
             message.AppendFormat("Received Toast {0}:\n", DateTime.Now.ToShortTimeString());
 
@@ -163,7 +180,12 @@ namespace sdkToastNotificationCS
             webClient.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
 
             webClient.Headers[HttpRequestHeader.ContentLength] = postData.Length.ToString();
-            webClient.UploadStringAsync(new Uri("http://192.168.43.134:8080/sopraMob/Register"), "POST", postData.ToString());
+
+            String ip = serveurIP.Text;
+            Uri url = new Uri("http://" + ip + ":8080/sopraMob/Register");
+            System.Diagnostics.Debug.WriteLine(url);
+
+            webClient.UploadStringAsync(new Uri("http://"+ip+":8080/sopraMob/Register"), "POST", postData.ToString());
         }
     }
 }

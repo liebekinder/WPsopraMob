@@ -38,7 +38,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Navigate to Page 2" Height="72" HorizontalAlignment="Left" Margin="83,82,0,0" Name="buttonNavigate" VerticalAlignment="Top" Width="281" Click="buttonNavigate_Click" />
+            <TextBox Height="72" HorizontalAlignment="Center" Margin="83,44,92,0" Name="serveurIP" VerticalAlignment="Top" Width="281" Text="192.168.0.42" TextAlignment="Center"/>
+            <Button Content="Navigate to Page 2" Height="72" HorizontalAlignment="Left" Margin="83,121,0,0" Name="buttonNavigate" VerticalAlignment="Top" Width="281" Click="buttonNavigate_Click" />
         </Grid>
     </Grid>
  
