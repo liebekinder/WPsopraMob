@@ -1,0 +1,13 @@
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\Bin\Debug\ApplicationIcon.png
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\Bin\Debug\Background.png
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\Bin\Debug\sdkToastNotificationCS.dll
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\Bin\Debug\sdkToastNotificationCS.pdb
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\Bin\Debug\AppManifest.xaml
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\Bin\Debug\sdkToastNotificationCS.xap
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\App.g.i.cs
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\MainPage.g.i.cs
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\Page2.g.i.cs
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\sdkToastNotificationCS.g.resources
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\sdkToastNotificationCS.dll
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\sdkToastNotificationCS.pdb
+C:\Users\Pierro\Documents\WindowsPhone\C#\sdkToastNotificationCS\obj\Debug\XapCacheFile.xml

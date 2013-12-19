@@ -1,0 +1,5 @@
+C:\Users\Pierro\Documents\WindowsPhone\C#\SendToast\SendToast\bin\SendToast.dll
+C:\Users\Pierro\Documents\WindowsPhone\C#\SendToast\SendToast\bin\SendToast.pdb
+C:\Users\Pierro\Documents\WindowsPhone\C#\SendToast\SendToast\obj\Debug\SendToast.csprojResolveAssemblyReference.cache
+C:\Users\Pierro\Documents\WindowsPhone\C#\SendToast\SendToast\obj\Debug\SendToast.dll
+C:\Users\Pierro\Documents\WindowsPhone\C#\SendToast\SendToast\obj\Debug\SendToast.pdb
